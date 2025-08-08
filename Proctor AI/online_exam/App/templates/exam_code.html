@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+       body{
+        background-image: url('static/code.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .nav-link{
+        color: black !important;
+    }
+</style>
+
+<center>
+<div class="d-felx flex-column align-items-center mt-5">
+    <form action="exam_code" method="post">
+        {% csrf_token %}
+    <p >Create Exam Code</p> <input type="number" name="code"><br>
+    <button type="submit" class="btn btn-primary mt-5">Create</button>
+    </form>
+</div>
+</center>
+
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body{
+        background-image: url('static/code.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .nav-link{
+        color: black !important;
+    }
+</style>
+
+<center style="margin-top: 10%;">
+    <h2>Your Exam Code</h2>
+    <h4>{{code}}</h4>
+</center>
+
+
+{% endblock content %}

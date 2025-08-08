@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+       body{
+        background-image: url('static/result.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+</style>
+
+<div class="container mt-md-5">
+    {% if data %}
+    <table id="example" class="table table-dark table-striped bg-dark" style="width:100%">
+        <thead>
+            <tr>
+                <th class="text-center">User ID</th>
+                <th class="text-center">User Name</th>
+                <th class="text-center">Result</th>
+                <th class="text-center">Strike</th>
+                <th class="text-center">Tab Strike</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td class="text-center" style="padding-top: 2%;">{{i.stu_id.id}}</td>
+                <td class="text-center" style="padding-top: 2%;">{{i.stu_id.username}}</td>
+                <td class="text-center" style="padding-top: 2%;">{{i.result}}</td>
+                <td class="text-center" style="padding-top: 2%;">{{i.strike}}</td>
+                <td class="text-center" style="padding-top: 2%;">{{i.Tab_strike}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <table id="example" class="table table-dark table-striped bg-dark mb-5" style="width:100%">
+        <thead>
+            <tr>
+                <th class="text-center">User ID</th>
+                <th class="text-center">User Name</th>
+                <th class="text-center">Result</th>
+                <th class="text-center">Strike</th>
+                <th class="text-center">Tab Strike</th>
+            </tr>
+        </thead>
+    </table>
+    <p class="text-center lead"><b> There Are No Notifications Received. </b></p>
+    {% endif %}
+</div>
+
+<!-- <button class="btn btn-primary">success</button> -->
+
+
+<script>
+    new DataTable('#example');
+</script>
+
+
+
+{% endblock content %}

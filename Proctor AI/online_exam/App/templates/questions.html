@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<style>
+    body{
+        background-image: url('static/teac.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* .nav-link{
+        color: black !important;
+    } */
+    
+</style>
+
+<form action="question" method="post">
+    {% csrf_token %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4 mb-5 " style="background-color: rgb(255, 255, 255, 0.4);">
+                <div class="d-flex row" style="padding: 15px">
+                    <input required type="text" name="quest1" placeholder="question 1" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q1p1" placeholder="Option 1" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q1p2" placeholder="Option 2" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q1p3" placeholder="Option 3" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q1p4" placeholder="Option 4" class="form-control" style="margin-bottom: 15px">
+                </div>
+            </div>
+            <div class="col-4 mb-5 " style="background-color: rgb(255, 255, 255, 0.4);">
+                <div class="d-flex row" style="padding: 15px">
+                    <input required type="text" name="quest2" placeholder="question 2" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q2p1" placeholder="Option 1" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q2p2" placeholder="Option 2" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q2p3" placeholder="Option 3" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q2p4" placeholder="Option 4" class="form-control" style="margin-bottom: 15px">
+                </div>
+            </div>
+            <div class="col-4 mb-5 " style="background-color: rgb(255, 255, 255, 0.4);">
+                <div class="d-flex row" style="padding: 15px">
+                    <input required type="text" name="quest3" placeholder="question 3" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q3p1" placeholder="Option 1" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q3p2" placeholder="Option 2" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q3p3" placeholder="Option 3" class="form-control" style="margin-bottom: 15px">
+                    <input required type="text" name="q3p4" placeholder="Option 4" class="form-control" style="margin-bottom: 15px">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary" value="Add Questions">
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}
